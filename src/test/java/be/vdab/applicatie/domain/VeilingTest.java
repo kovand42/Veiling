@@ -14,5 +14,10 @@ public class VeilingTest {
 	public void hetHoogsteBodVanEenNieuweVeilingIsNul() {
 		assertEquals(0, veiling.getHoogsteBod());
 	}
+	@Test
+	public void naEenEersteBodIsHetHoogsteBodGelijkAanHetBedragVanDitBod() {
+		veiling.doeBod(100);
+		assertEquals(100, veiling.getHoogsteBod());
+	}
 
 }
