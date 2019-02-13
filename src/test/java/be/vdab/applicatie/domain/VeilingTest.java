@@ -19,5 +19,12 @@ public class VeilingTest {
 		veiling.doeBod(100);
 		assertEquals(100, veiling.getHoogsteBod());
 	}
+	@Test
+	public void hetHoogsteBodNaEerst100Dan200Dan150is200() {
+		veiling.doeBod(100);
+		veiling.doeBod(200);
+		veiling.doeBod(150);
+		assertEquals(200, veiling.getHoogsteBod());
+	}
 
 }
